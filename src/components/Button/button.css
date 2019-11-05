@@ -1,0 +1,10 @@
+.button-style {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  color: white;
+  background: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

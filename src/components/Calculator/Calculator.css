@@ -1,0 +1,13 @@
+.calculator {
+  width: 350px;
+  height: 500px;
+  background: #000;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  align-content: end;
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+}
