@@ -3,13 +3,30 @@ import "./Calculator.css"
 import ButtonItem from "../Button/button"
 import { calculatorItem } from "../../utils/items"
 
-const Calculator = () => {
+const Calculator = ({
+  currentState,
+  setStateToInitialValue,
+  setStateToCurrentValue
+}) => {
+  const displayOnClick = e => {
+    if (e.target.innerText === "AC") {
+      setStateToInitialValue()
+    } else {
+      setStateToCurrentValue(e)
+    }
+  }
+
   return (
     <div className="calculator-container">
-      <div id="display">100</div>
+      {/* 6. My calculator should contain an element to display values with a corresponding id="display" */}
+      <div id="display">{currentState}</div>
       <div className="calculator">
         {calculatorItem.map((e, i) => (
-          <ButtonItem key={i} item={e}></ButtonItem>
+          <ButtonItem
+            key={i}
+            item={e}
+            displayOnClick={displayOnClick}
+          ></ButtonItem>
         ))}
       </div>
     </div>

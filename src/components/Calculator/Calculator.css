@@ -3,7 +3,7 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   align-content: end;
-  justify-items: center;
+  /* justify-items: center; */
   align-items: center;
 }
 
@@ -26,4 +26,73 @@
   justify-content: flex-end;
   height: 100%;
   align-items: center;
+}
+
+#clear {
+  grid-column: 1/5;
+  order: 0;
+}
+
+#equals {
+  order: 16;
+}
+
+#multiply {
+  order: 8;
+}
+
+#add {
+  order: 15;
+}
+
+#subtract {
+  order: 4;
+}
+
+#divide {
+  order: 12;
+}
+
+#decimal {
+  order: 14;
+}
+
+#zero {
+  order: 13;
+}
+
+#one {
+  order: 9;
+}
+
+#two {
+  order: 10;
+}
+
+#three {
+  order: 11;
+}
+
+#four {
+  order: 5;
+}
+
+#five {
+  order: 6;
+}
+
+#six {
+  order: 7;
+}
+
+#seven {
+  order: 1;
+}
+
+#eight {
+  order: 2;
+}
+
+#nine {
+  order: 3;
 }
