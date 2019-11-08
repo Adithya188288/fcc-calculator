@@ -1,19 +1,37 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./Calculator.css"
 import ButtonItem from "../Button/button"
-import { calculatorItem } from "../../utils/items"
+import { calculatorItem, keycodes } from "../../utils/items"
 
 const Calculator = ({
   currentState,
   setStateToInitialValue,
   setStateToCurrentValue
 }) => {
+  useEffect(() => {
+    document.addEventListener("keydown", displayOnClickKeyBoard)
+    return () => {
+      document.removeEventListener("keydown", displayOnClickKeyBoard)
+    }
+  })
+
+  // Mouse Event
   const displayOnClick = e => {
-    console.log(e.target)
     if (e.target.innerText === "AC") {
       setStateToInitialValue()
     } else {
       setStateToCurrentValue(e)
+    }
+  }
+
+  //This method will run if KeyBoard Event ie key press is trigged
+  const displayOnClickKeyBoard = e => {
+    const { key, keyCode } = e
+
+    if (keyCode === 27) {
+      setStateToInitialValue()
+    } else if (keycodes.includes(keyCode)) {
+      setStateToCurrentValue(key)
     }
   }
 

@@ -18,6 +18,27 @@ export const calculatorItem = [
   [0, "zero"]
 ]
 
+//Can be found in e.which
+export const keycodes = [
+  96,
+  110,
+  187, //equal to
+  61, // equal to
+  107,
+  109,
+  106,
+  111,
+  103,
+  104,
+  105,
+  102,
+  101,
+  100,
+  97,
+  98,
+  99
+]
+
 // 1. My calculator should contain a clickable element containing an "=" (equal sign) with a corresponding id="equals"
 // 2. My calculator should contain 10 clickable elements containing one number each from 0-9, with the following corresponding IDs: id="zero", id="one", id="two", id="three", id="four", id="five", id="six", id="seven", id="eight", and id="nine"
 // 3. My calculator should contain 4 clickable elements each containing one of the 4 primary mathematical operators with the following corresponding IDs: id="add", id="subtract", id="multiply", id="divide"

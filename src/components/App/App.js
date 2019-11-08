@@ -25,7 +25,12 @@ class App extends Component {
     }
 
     const setStateToCurrentValue = e => {
-      let currentValue = e.target.innerText
+      let currentValue
+      if (typeof e === "object") {
+        currentValue = e.target.innerText
+      } else {
+        currentValue = e
+      }
 
       if (currentValue === "=") {
         startCalculation()
