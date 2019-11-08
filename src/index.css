@@ -5,9 +5,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "digital-7";
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* To remove the ------ focus border when a button is focused in moz-firefox*/
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* To remove the ------ focus border when a button is focused other browsers*/
+button:focus {
+  outline: none;
+}
+
+/* custom font */
+@font-face {
+  font-family: "digital-7";
+  src: local("digital-7"), url(./fonts/digital-7.ttf) format("truetype");
 }

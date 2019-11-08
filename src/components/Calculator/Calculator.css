@@ -96,3 +96,11 @@
 #nine {
   order: 3;
 }
+
+/* For Mobile Devices */
+@media (max-width: 500px) {
+  .calculator-container {
+    width: 250px;
+    height: 450px;
+  }
+}

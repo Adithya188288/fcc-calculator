@@ -8,4 +8,14 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border: 0;
+}
+
+/* For Mobile Devices */
+@media (max-width: 500px) {
+  .button-style {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
 }
